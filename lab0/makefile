@@ -5,3 +5,8 @@ clean:
 	rm test
 run:
 	./ls
+	./ls ../../
+	./ls -l
+	./ls ../../../ -l
+	./ls -l ../../../
+
