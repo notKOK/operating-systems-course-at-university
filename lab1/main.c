@@ -7,7 +7,7 @@
 
 void exitfunc()
 {
-	printf("hey vsause atexit() here  pid=%d\n", getpid());
+	printf(" hey vsause atexit() here  pid=%d\n", getpid());
 	return;
 };	
 

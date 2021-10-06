@@ -39,7 +39,6 @@ int main(int argc, char** argv)
 				case ':':
 					{
 						dirway = &argv[1][0];
-						printf(": CASE \n\n\n");
 					}
 				case 'l':
 					{
@@ -112,7 +111,7 @@ int main(int argc, char** argv)
 				printf((file_info.st_mode & S_IROTH)?"r":"-");
 				printf((file_info.st_mode & S_IWOTH)?"w":"-");
 				printf((file_info.st_mode & S_IXOTH)?"x":"-");
-				printf(" %2hu", file_info.st_nlink);
+				printf(" %3hu", file_info.st_nlink);
 
 				struct passwd * pwd;
 				pwd = getpwuid(file_info.st_uid);
@@ -124,7 +123,7 @@ int main(int argc, char** argv)
 				grp = getgrgid(file_info.st_gid);
 				printf(" %8s", grp->gr_name);
 
-				printf(" %5d", file_info.st_size);
+				printf(" %5u", file_info.st_size);
 
 				char *wanted = ctime(&file_info.st_mtime);
 				char *result[5];

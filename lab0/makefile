@@ -2,7 +2,7 @@ all:comp
 comp:
 	gcc main.c -o ls
 clean:
-	rm test
+	rm ls
 run:
 	./ls
 	./ls ../../
