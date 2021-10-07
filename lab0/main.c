@@ -123,7 +123,7 @@ int main(int argc, char** argv)
 				grp = getgrgid(file_info.st_gid);
 				printf(" %8s", grp->gr_name);
 
-				printf(" %5u", file_info.st_size);
+				printf(" %-5lu", file_info.st_size);
 
 				char *wanted = ctime(&file_info.st_mtime);
 				char *result[5];
